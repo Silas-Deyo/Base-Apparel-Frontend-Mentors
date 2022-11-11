@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=PT+Serif:ital,wght@1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    * {
+      margin: 0;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    body * {
+      box-sizing: border-box;
+      /* border: 1px solid; */
+    }
+
+    .container {
+      height: 96%;
+      background-image: url(./images/bg-pattern-desktop.svg);
+      background-color: rgb(255, 246, 245);
+      display: grid;
+      grid-template-columns: 57.5% 42.5%;
+      grid-auto-rows: 100%;
+    }
+
+    section:first-child {
+      padding:8% 26.1% 20% 19.2%;
+      /* padding-right: 26.1%;
+      padding-top: 8%;
+      padding-bottom: 20%; */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .logo {
+      margin-bottom: 20%;
+    }
+
+    h1 {
+      font-size: 3.8rem;
+      font-weight: 400;
+      letter-spacing: 1rem;
+    }
+
+    .hello {
+      line-height: 1.5rem;
+      color: hsl(0, 36%, 70%);
+      padding-right: 2%;
+    }
+
+    section:last-child > img {
+      width: 100%;
+      height: 100%;
+    }
+
+
+    form {
+      position: relative;
+      display: flex;
+      justify-content: end;
+    }
+    input {
+      /* width: 100%; */
+      flex: 1;
+      padding: 4%;
+      border-radius: 30rem;
+      font-family: 'Josefin Sans', sans-serif;
+      border: 1px solid hsl(0, 36%, 70%);
+      background-color: rgba(255, 246, 245, 0%);
+    }
+    button {
+      position: absolute;
+      right: 0;
+      height: 100%;
+      width: 24%;
+      border: none;
+      border-radius: 30rem;
+      background-color: hsl(0, 93%, 68%);
+    }
+
+    button::hover {
+      background-color: #f8cecf;
+    }
+
+    input::placeholder {
+      color: hsl(0, 36%, 70%);
+    }
+
+    span {
+      color: hsl(0, 36%, 70%);
+      font-weight: 300;
+    }
+
+    footer {
+      height: 4%;
+      padding-top: 1%;
+    }
+
+    @media screen and (max-width: 375px) {
+      html, body {
+        height: 100%;
+      }
+      .container {
+        height: 97.5%;
+        display: grid;
+        grid-template-columns: 100%;
+        /* grid-auto-rows: minmax(100px, auto);    top sec: 240px bottom section: 363.5px */
+        grid-template-rows: 47% 53%;
+      }
+      section:last-child > img {
+        display: none;
+       }
+       section:last-child {
+        background-image: url(./images/hero-mobile.jpg), url(./images/logo.svg);
+        background-repeat: no-repeat;
+        background-position: bottom, 11% 9.3% ;
+        background-size: auto, 25%;
+       }
+      section:first-child {
+        order: 1;
+        padding: 14% 11%;
+      }
+      .logo {display: none;}
+      h1 {
+        font-size: 2.3rem;
+        letter-spacing: 0.5rem;
+        text-align: center;
+      }
+      .hello {
+        text-align: center;
+        padding: none;
+        font-size: 0.8rem;
+      }
+      footer {
+        height: 2.5%;
+      }
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section>
+      <div class="logo">
+        <img src="./images/logo.svg" alt="">
+      </div>
+      <h1><span>WE'RE</span> COMING SOON</h1>
+      <p class="hello">
+        Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.
+      </p>
+      <form action="">
+        <input type="email" name="email" id="email" placeholder="Email Address">
+        <button><img src="./images/icon-arrow.svg" alt=""></button>
+      </form>
+    </section>
+    <section>
+      <img src="./images/hero-desktop.jpg" alt="">
+    </section>
+  </div>
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/Silas-Deyo">Silas-Deyo</a>.
+    </p>
+  </footer>
+</body>
+</html>
